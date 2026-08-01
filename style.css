@@ -1,31 +1,134 @@
-body {
-    background: #111;
-    color: white;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding-top: 100px;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
-h1 {
-    color: #00ff99;
-    font-size: 50px;
+html{
+    scroll-behavior:smooth;
 }
 
-p {
-    font-size: 22px;
-}body {
-    background: #111;
-    color: white;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding-top: 100px;
+body{
+    background:#0b0b0b;
+    color:#fff;
 }
 
-h1 {
-    color: #00ff99;
-    font-size: 50px;
+.navbar{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:22px 8%;
+    position:fixed;
+    top:0;
+    left:0;
+    background:rgba(0,0,0,.75);
+    backdrop-filter:blur(10px);
+    z-index:999;
 }
 
-p {
-    font-size: 22px;
+.logo{
+    font-size:30px;
+    font-weight:700;
+    color:#00e676;
+}
+
+.logo span{
+    color:#fff;
+}
+
+.menu{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+.menu a{
+    color:#fff;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.menu a:hover{
+    color:#00e676;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:120px 8%;
+    background:linear-gradient(135deg,#0b0b0b,#121212,#0b0b0b);
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.hero h1{
+    font-size:58px;
+    line-height:1.2;
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    color:#00e676;
+}
+
+.hero p{
+    font-size:20px;
+    color:#cfcfcf;
+    line-height:1.8;
+    margin-bottom:40px;
+}
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:16px 35px;
+    background:#00e676;
+    color:#000;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+}
+
+.btn-outline{
+    background:transparent;
+    border:2px solid #00e676;
+    color:#00e676;
+}
+
+.btn-outline:hover{
+    background:#00e676;
+    color:#000;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:38px;
+}
+
+.menu{
+    display:none;
+}
+
+.hero p{
+    font-size:17px;
+}
+
 }
