@@ -20,49 +20,66 @@ margin:auto;
 
 /* NAVBAR */
 
+/* NAVBAR */
+
 header{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-background:rgba(0,0,0,.75);
-backdrop-filter:blur(18px);
-z-index:999;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:90px;
+    background:rgba(0,0,0,.90);
+    backdrop-filter:blur(18px);
+    z-index:999;
 }
 
 .nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:22px 0;
+    width:92%;
+    max-width:1400px;
+    height:90px;
+    margin:auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 }
+
+/* LOGO LEFT */
 
 .logo{
-font-size:30px;
-font-weight:800;
+    display:flex;
+    align-items:center;
+    flex-shrink:0;
 }
 
-.logo span{
-color:#00e676;
+.logo img{
+    width:150px;
+    height:auto;
+    display:block;
 }
 
-.nav ul{
-display:flex;
-gap:40px;
-list-style:none;
+/* MENU RIGHT */
+
+.nav-menu{
+    display:flex;
+    align-items:center;
+    gap:38px;
+    list-style:none;
+    margin:0;
+    padding:0;
 }
 
-.nav a{
-text-decoration:none;
-color:white;
-font-weight:500;
-transition:.3s;
+.nav-menu a{
+    color:white;
+    text-decoration:none;
+    font-size:15px;
+    font-weight:600;
+    transition:.3s;
 }
 
-.nav a:hover{
-color:#00e676;
+.nav-menu a:hover{
+    color:#00e676;
 }
-
 /* HERO */
 
 .hero{
@@ -190,20 +207,34 @@ line-height:1.7;
 
 @media(max-width:900px){
 
-.hero h1{
-font-size:48px;
-}
+    header{
+        height:80px;
+    }
 
-.hero p{
-font-size:18px;
-}
+    .nav{
+        height:80px;
+        width:92%;
+    }
 
-.nav ul{
-display:none;
-}
+    .logo img{
+        width:125px;
+    }
 
-.services h2{
-font-size:34px;
+    .nav-menu{
+        display:none;
+    }
+
+    .hero{
+        padding-top:100px;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
 }
 
 }.about{
@@ -254,4 +285,461 @@ margin-bottom:10px;
 
 .box p{
 color:#ddd;
+}
+/* ================= PREMIUM MARKETPLACE BOXES ================= */
+
+.marketplace-intro{
+    max-width:700px;
+    margin:18px auto 55px;
+    color:#aaa;
+    line-height:1.8;
+}
+
+/* FULL WIDTH BOX */
+
+.marketplace-box{
+    width:92%;
+    max-width:1200px;
+    margin:0 auto 30px;
+
+    padding:35px 40px;
+
+    background:
+        linear-gradient(
+            110deg,
+            rgba(0,230,118,.08),
+            rgba(255,255,255,.025) 45%,
+            rgba(0,0,0,.25)
+        );
+
+    border:1px solid rgba(0,230,118,.20);
+    border-radius:24px;
+
+    position:relative;
+    overflow:hidden;
+
+    transition:.4s;
+}
+
+.marketplace-box::before{
+    content:"";
+
+    position:absolute;
+    left:0;
+    top:0;
+
+    width:4px;
+    height:100%;
+
+    background:#00e676;
+
+    box-shadow:0 0 25px rgba(0,230,118,.7);
+}
+
+.marketplace-box:hover{
+    transform:translateY(-6px);
+
+    border-color:#00e676;
+
+    box-shadow:
+        0 20px 55px rgba(0,230,118,.14);
+}
+
+
+/* HEADER */
+
+.marketplace-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:20px;
+
+    padding-bottom:20px;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.marketplace-tag{
+    color:#00e676;
+
+    font-size:12px;
+    font-weight:700;
+
+    letter-spacing:2px;
+}
+
+.marketplace-header h3{
+    font-size:38px;
+    margin-top:7px;
+
+    color:#fff;
+}
+
+.marketplace-badge{
+    padding:8px 15px;
+
+    border:1px solid rgba(0,230,118,.35);
+    border-radius:30px;
+
+    color:#00e676;
+
+    font-size:11px;
+    font-weight:700;
+
+    letter-spacing:1px;
+}
+
+
+/* DESCRIPTION */
+
+.marketplace-description{
+    color:#aaa;
+
+    font-size:15px;
+    line-height:1.8;
+
+    max-width:850px;
+
+    margin:20px 0 25px;
+}
+
+
+/* SERVICES */
+
+.marketplace-services{
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:12px 15px;
+
+    margin-bottom:28px;
+}
+
+.marketplace-services div{
+    padding:13px 15px;
+
+    background:rgba(255,255,255,.035);
+
+    border:1px solid rgba(255,255,255,.06);
+
+    border-radius:10px;
+
+    color:#ddd;
+
+    font-size:13px;
+
+    transition:.3s;
+}
+
+.marketplace-services div:hover{
+    color:#00e676;
+
+    border-color:rgba(0,230,118,.35);
+
+    background:rgba(0,230,118,.06);
+}
+
+
+/* BUTTON */
+
+.marketplace-action{
+    display:inline-block;
+
+    padding:12px 24px;
+
+    border:1px solid #00e676;
+
+    border-radius:30px;
+
+    color:#00e676;
+
+    font-size:13px;
+    font-weight:700;
+
+    transition:.3s;
+}
+
+.marketplace-action:hover{
+    background:#00e676;
+
+    color:#000;
+
+    box-shadow:0 10px 25px rgba(0,230,118,.25);
+}
+
+
+/* ================= TABLET ================= */
+
+@media(max-width:1000px){
+
+    .marketplace-services{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:600px){
+
+    .marketplace-box{
+        width:92%;
+        padding:28px 22px;
+        border-radius:18px;
+    }
+
+    .marketplace-header{
+        align-items:flex-start;
+        flex-direction:column;
+    }
+
+    .marketplace-header h3{
+        font-size:32px;
+    }
+
+    .marketplace-badge{
+        font-size:9px;
+    }
+
+    .marketplace-services{
+        grid-template-columns:1fr;
+    }
+
+    .marketplace-description{
+        font-size:14px;
+    }
+
+}
+/* =========================
+   CONTACT POPUP
+========================= */
+
+.contact-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.72);
+
+    z-index: 99999;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.contact-modal.active {
+    display: flex;
+}
+
+.contact-modal-content {
+    position: relative;
+
+    width: 100%;
+    max-width: 850px;
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    padding: 35px;
+
+    box-sizing: border-box;
+
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.35);
+
+    animation: contactPopupOpen 0.25s ease;
+}
+
+@keyframes contactPopupOpen {
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* CLOSE BUTTON */
+
+.contact-close {
+    position: absolute;
+
+    top: 15px;
+    right: 18px;
+
+    width: 38px;
+    height: 38px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #f1f1f1;
+
+    font-size: 28px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.contact-close:hover {
+    transform: rotate(90deg);
+}
+
+
+/* POPUP HEADER */
+
+.contact-modal-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.contact-modal-header h2 {
+    margin: 5px 0 10px;
+}
+
+.contact-modal-header p {
+    margin: 0;
+}
+
+
+/* FORM */
+
+#leadForm {
+    width: 100%;
+}
+
+#leadForm .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+
+    margin-bottom: 18px;
+}
+
+#leadForm .form-group {
+    margin-bottom: 18px;
+}
+
+#leadForm label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-weight: 600;
+}
+
+#leadForm input,
+#leadForm select,
+#leadForm textarea {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #d8d8d8;
+
+    border-radius: 9px;
+
+    font-size: 15px;
+
+    box-sizing: border-box;
+
+    outline: none;
+
+    background: #ffffff;
+}
+
+#leadForm input:focus,
+#leadForm select:focus,
+#leadForm textarea:focus {
+    border-color: #111111;
+
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
+}
+
+#leadForm textarea {
+    resize: vertical;
+}
+
+
+/* SUBMIT BUTTON */
+
+.contact-submit-btn {
+    width: 100%;
+
+    border: none;
+
+    padding: 15px 20px;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    background: #111111;
+
+    color: #ffffff;
+
+    transition: 0.25s;
+}
+
+.contact-submit-btn:hover {
+    transform: translateY(-1px);
+
+    opacity: 0.9;
+}
+
+.contact-submit-btn:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .contact-modal {
+        padding: 10px;
+    }
+
+    .contact-modal-content {
+        padding: 25px 18px;
+
+        max-height: 94vh;
+
+        border-radius: 14px;
+    }
+
+    #leadForm .form-row {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
+    .contact-modal-header h2 {
+        font-size: 25px;
+    }
+
 }
